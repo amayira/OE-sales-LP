@@ -439,6 +439,18 @@ section{padding:90px 0}
 .guar-unit{font-size:.68rem;color:var(--sub);margin:.2rem 0 .5rem}
 .guar h3{font-size:.78rem;font-weight:700;color:var(--ink)}
 
+/* ===== STRUCTURE FIGURES ===== */
+.fig-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1.25rem}
+@media(max-width:680px){.fig-grid{grid-template-columns:1fr}}
+.fig{background:#fff;border:1px solid var(--border);border-radius:4px;box-shadow:var(--sh);overflow:hidden}
+.fig svg{display:block;width:100%;height:auto;background:var(--gpale)}
+.fig-body{padding:1rem 1.15rem 1.2rem}
+.fig-n{font-size:.6rem;font-weight:700;letter-spacing:.15em;color:var(--g2);margin-bottom:.25rem}
+.fig h3{font-size:1rem;font-weight:900;color:var(--ink);line-height:1.5;margin-bottom:.4rem}
+.fig p{font-size:.8rem;color:var(--body);line-height:1.85}
+.fig .why{margin-top:.6rem;padding:.55rem .75rem;background:var(--gpale);border-left:3px solid var(--g2);font-size:.78rem;font-weight:700;color:var(--g1);line-height:1.7}
+.fig-src{font-size:.68rem;color:var(--muted);margin-top:1rem;line-height:1.8}
+.fig text{font-family:'Hiragino Sans','Noto Sans JP','Yu Gothic',sans-serif}
 /* ===== DRAFT MARK ===== */
 .tbd{background:#fff3a0;color:#5a4a00;padding:0 .25em;border-radius:2px;font-weight:700}
 /* ===== SECTION 05 — ASSET VALUE ===== */
@@ -875,13 +887,111 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
+  <!-- Structure -->
+  <div class="spec-section reveal" style="margin-top:2.5rem">
+    <div class="spec-title">Structure — 鉄骨造「Kフレーム」が、なぜ強いのか</div>
+    <div class="fig-grid">
+      <div class="fig"><svg viewBox="0 0 360 230" role="img" aria-label="K型フレームの構造イメージ">
+  <rect x="95" y="25" width="170" height="170" fill="none" stroke="#c8e0c8" stroke-dasharray="4 4"/>
+  <rect x="95" y="25" width="12" height="170" fill="var(--g1)"/>
+  <rect x="253" y="25" width="12" height="170" fill="var(--g1)"/>
+  <rect x="95" y="25" width="170" height="8" fill="var(--g1)"/>
+  <rect x="95" y="187" width="170" height="8" fill="var(--g1)"/>
+  <line x1="107" y1="110" x2="253" y2="33" stroke="var(--g3)" stroke-width="7"/>
+  <line x1="107" y1="110" x2="253" y2="187" stroke="var(--g3)" stroke-width="7"/>
+  <circle cx="107" cy="110" r="6" fill="#fff" stroke="var(--g1)" stroke-width="3"/>
+  <text x="180" y="118" font-size="13" font-weight="800" fill="var(--g1)" text-anchor="middle">K</text>
+  <line x1="95" y1="212" x2="265" y2="212" stroke="var(--sub)" stroke-width="1"/>
+  <text x="180" y="224" font-size="10" fill="var(--sub)" text-anchor="middle">幅 910mm ／ 高さ 2,500〜2,900mm</text>
+  <text x="18" y="108" font-size="10" fill="var(--g1)" font-weight="700">柱</text>
+  <text x="18" y="121" font-size="9" fill="var(--sub)">□100×100</text>
+  <text x="275" y="62" font-size="10" fill="var(--g2)" font-weight="700">斜材</text>
+  <text x="275" y="75" font-size="9" fill="var(--sub)">□50×50</text>
+</svg><div class="fig-body"><div class="fig-n">POINT 01</div><h3>K字のブレースで、壁そのものが支える</h3><p>工場で製作した、K字の筋かい入りの鉄骨フレームを壁に配置する構造です。柱のサイズが一定で、必要な耐力壁が少なくて済みます。</p><div class="why">だから、間取りの自由度が高く、4階建てでも空間を使い切れる。</div></div></div>
+      <div class="fig"><svg viewBox="0 0 360 230" role="img" aria-label="耐震性能のイメージ">
+  <text x="20" y="28" font-size="11" font-weight="800" fill="var(--ink)">横揺れへの強さ（耐力壁の比較）</text>
+  <text x="20" y="62" font-size="10" fill="var(--sub)">φ25鉄筋X型筋かい</text>
+  <rect x="20" y="70" width="120" height="26" fill="#c8d6c8"/>
+  <text x="146" y="88" font-size="11" fill="var(--sub)" font-weight="700">1.0</text>
+  <text x="20" y="128" font-size="10" fill="var(--g1)" font-weight="800">K型フレーム</text>
+  <rect x="20" y="136" width="168" height="26" fill="var(--g2)"/>
+  <text x="194" y="154" font-size="12" fill="var(--g1)" font-weight="900">1.4倍以上</text>
+  <text x="20" y="188" font-size="9.5" fill="var(--sub)">剛性・耐力・最大変形能力（メーカー実験）</text>
+  <text x="20" y="206" font-size="9.5" fill="var(--sub)">水平方向の強度 5t（実験値）</text>
+  <text x="20" y="221" font-size="9" fill="var(--muted)">試験：日本建築総合試験所／大阪工業大学八幡試験所</text>
+</svg><div class="fig-body"><div class="fig-n">POINT 02</div><h3>横揺れに強く、実験で性能を確認</h3><p>φ25鉄筋のX型筋かいの耐力壁と比べ、剛性・耐力・最大変形能力が1.4倍以上であることを、第三者機関での実験で確認しています。</p><div class="why">だから、地震への備えを数字で語れる。</div></div></div>
+      <div class="fig"><svg viewBox="0 0 360 230" role="img" aria-label="耐火壁の断面イメージ">
+  <text x="20" y="28" font-size="11" font-weight="800" fill="var(--ink)">外壁の断面（イメージ）</text>
+  <rect x="50" y="50" width="48" height="120" fill="#e8e2d4" stroke="#b9ae93"/>
+  <rect x="98" y="50" width="70" height="120" fill="var(--g3)" opacity=".85"/>
+  <rect x="168" y="50" width="26" height="120" fill="#f4f1ea" stroke="#cfc8b4"/>
+  <rect x="194" y="50" width="26" height="120" fill="#ebe7da" stroke="#cfc8b4"/>
+  <text x="74" y="188" font-size="9.5" fill="var(--sub)" text-anchor="middle">ケイカル板</text>
+  <text x="133" y="112" font-size="10" fill="#fff" font-weight="800" text-anchor="middle">K型</text>
+  <text x="133" y="126" font-size="10" fill="#fff" font-weight="800" text-anchor="middle">フレーム</text>
+  <text x="133" y="188" font-size="9.5" fill="var(--sub)" text-anchor="middle">鉄骨</text>
+  <text x="207" y="188" font-size="9.5" fill="var(--sub)" text-anchor="middle">強化せっこう</text>
+  <text x="207" y="200" font-size="9.5" fill="var(--sub)" text-anchor="middle">ボード重張</text>
+  <text x="50" y="44" font-size="9.5" fill="var(--sub)">外側</text>
+  <text x="196" y="44" font-size="9.5" fill="var(--sub)">室内側</text>
+  <circle cx="300" cy="105" r="44" fill="var(--g1)"/>
+  <text x="300" y="100" font-size="22" fill="#fff" font-weight="900" text-anchor="middle">1時間</text>
+  <text x="300" y="120" font-size="11" fill="#fff" font-weight="800" text-anchor="middle">耐火認定</text>
+  <text x="300" y="168" font-size="9" fill="var(--sub)" text-anchor="middle">壁・梁とも取得</text>
+</svg><div class="fig-body"><div class="fig-n">POINT 03</div><h3>壁・梁とも「1時間耐火」の認定を取得</h3><p>外壁や間仕切壁、壁上部の梁まで、1時間耐火の認定を取得。柱の耐火被覆が不要で、外壁の仕上げ材（サイディング等）も選べます。</p><div class="why">だから、防火地域を含む、立地の選択肢が広がる。</div></div></div>
+      <div class="fig"><svg viewBox="0 0 360 230" role="img" aria-label="軽量で地盤に優しいイメージ">
+  <rect x="0" y="150" width="360" height="80" fill="#e5dcc8"/>
+  <text x="180" y="218" font-size="9.5" fill="var(--sub)" text-anchor="middle">地盤（地耐力 30kN以上 でベタ基礎に対応）</text>
+  <rect x="40" y="62" width="110" height="84" fill="var(--g3)" opacity=".85"/>
+  <rect x="40" y="62" width="110" height="10" fill="var(--g1)"/>
+  <rect x="36" y="146" width="118" height="9" fill="#8a7e66"/>
+  <text x="95" y="108" font-size="10" fill="#fff" font-weight="800" text-anchor="middle">K型フレーム</text>
+  <text x="95" y="122" font-size="9" fill="#fff" text-anchor="middle">軽い</text>
+  <rect x="215" y="40" width="130" height="106" fill="#9aa59a"/>
+  <rect x="215" y="40" width="130" height="10" fill="#6f7a6f"/>
+  <text x="280" y="96" font-size="10" fill="#fff" font-weight="800" text-anchor="middle">従来の鉄骨造</text>
+  <text x="280" y="110" font-size="9" fill="#fff" text-anchor="middle">重い</text>
+  <rect x="205" y="146" width="150" height="16" fill="#6f634d"/>
+  <text x="95" y="182" font-size="9.5" fill="var(--g1)" font-weight="800" text-anchor="middle">基礎が小さくて済む</text>
+  <text x="280" y="182" font-size="9.5" fill="var(--sub)" text-anchor="middle">基礎が大きくなる</text>
+  <text x="20" y="28" font-size="11" font-weight="800" fill="var(--ink)">建物が軽い＝地盤への負担が小さい</text>
+</svg><div class="fig-body"><div class="fig-n">POINT 04</div><h3>軽くて、地盤に優しい</h3><p>従来の鉄骨造に比べて建物重量が軽く、基礎も小さく済みます。軟弱地盤でも、地耐力30kN以上ならベタ基礎で対応できます。</p><div class="why">だから、土地の条件で諦めずに済み、コストも抑えやすい。</div></div></div>
+      <div class="fig"><svg viewBox="0 0 360 230" role="img" aria-label="室内空間の比較">
+  <text x="20" y="28" font-size="11" font-weight="800" fill="var(--ink)">室内（平面イメージ）</text>
+  <rect x="25" y="50" width="140" height="110" fill="#fff" stroke="#8a9a8a" stroke-width="2"/>
+  <rect x="25" y="50" width="22" height="22" fill="#9aa59a"/><rect x="143" y="50" width="22" height="22" fill="#9aa59a"/>
+  <rect x="25" y="138" width="22" height="22" fill="#9aa59a"/><rect x="143" y="138" width="22" height="22" fill="#9aa59a"/>
+  <rect x="25" y="50" width="140" height="9" fill="#9aa59a" opacity=".6"/><rect x="25" y="151" width="140" height="9" fill="#9aa59a" opacity=".6"/>
+  <text x="95" y="112" font-size="10" fill="var(--sub)" text-anchor="middle">柱型・梁型が</text>
+  <text x="95" y="126" font-size="10" fill="var(--sub)" text-anchor="middle">出っ張る</text>
+  <text x="95" y="180" font-size="9.5" fill="var(--sub)" text-anchor="middle">一般的な鉄骨ラーメン構造</text>
+  <rect x="195" y="50" width="140" height="110" fill="#fff" stroke="var(--g2)" stroke-width="2"/>
+  <text x="265" y="112" font-size="10" fill="var(--g1)" font-weight="800" text-anchor="middle">壁がフラット</text>
+  <text x="265" y="126" font-size="10" fill="var(--g1)" text-anchor="middle">梁も天端フラット</text>
+  <text x="265" y="180" font-size="9.5" fill="var(--g1)" font-weight="800" text-anchor="middle">K型フレーム</text>
+  <text x="180" y="212" font-size="9.5" fill="var(--sub)" text-anchor="middle">天井高を最大限にとれる・床材も選べる</text>
+</svg><div class="fig-body"><div class="fig-n">POINT 05</div><h3>柱型・梁型が出ない、すっきりした室内</h3><p>梁の天端をフラットにして、柱型や梁型の出っ張りを抑えます。天井高を最大限にとれ、床材も構造用合板やALCから選べます。</p><div class="why">だから、入居者に選ばれやすい住空間をつくれる。</div></div></div>
+      <div class="fig">
+        <svg viewBox="0 0 360 230" role="img" aria-label="耐久性と施工性のイメージ">
+          <text x="20" y="28" font-size="11" font-weight="800" fill="var(--ink)">長く使える・狭い土地でも建てられる</text>
+          <rect x="20" y="46" width="320" height="34" rx="3" fill="#fff" stroke="var(--g3)"/><text x="34" y="67" font-size="11" fill="var(--g1)" font-weight="800">サビ対策：溶融亜鉛メッキ／錆止め塗装</text>
+          <rect x="20" y="88" width="320" height="34" rx="3" fill="#fff" stroke="var(--g3)"/><text x="34" y="109" font-size="11" fill="var(--g1)" font-weight="800">木材のような経年変化・シロアリの心配なし</text>
+          <rect x="20" y="130" width="320" height="34" rx="3" fill="#fff" stroke="var(--g3)"/><text x="34" y="151" font-size="11" fill="var(--g1)" font-weight="800">工場製作→現場で1階ずつ組み上げ</text>
+          <rect x="20" y="172" width="320" height="34" rx="3" fill="var(--g1)"/><text x="34" y="193" font-size="11" fill="#fff" font-weight="800">大型クレーン不要。小型クレーンで施工可能</text>
+        </svg>
+        <div class="fig-body"><div class="fig-n">POINT 06</div><h3>錆びにくく、狭小地でも建つ</h3><p>鉄材は木材のような経年変化がなく、シロアリの心配もありません。工場製作のため、大型クレーンが入らない狭小地でも施工できます。</p><div class="why">だから、長く資産価値を保ち、都心の土地にも対応できる。</div></div>
+      </div>
+    </div>
+    <p class="fig-src">※構造・性能の内容はK型フレーム（株式会社コーヨークリエイト）の公式情報に基づきます。図はイメージであり、実際の寸法・仕様と異なる場合があります。性能値はメーカーの実験によるものです。</p>
+  </div>
+
   <!-- Steel -->
   <div class="spec-section reveal" style="margin-top:2.5rem">
     <div class="spec-title">Construction — 鉄骨造4階建の資産性</div>
     <div class="wood-row">
-      <div class="wood"><div class="wood-badge">耐用</div><h3>法定耐用年数</h3><div class="data">34年<br>（木造は22年）</div><p>Kフレームの鋼材仕様による。耐用年数が長いほど、金融機関・買い手の評価が高まる。</p></div>
+      <div class="wood"><div class="wood-badge">耐用</div><h3>法定耐用年数</h3><div class="data">34年<br>（木造は22年）</div><p>Kフレームの鋼材仕様による。耐用年数が長いほど、金融機関・買い手の評価が高まる。<span class="tbd">標準の柱板厚は2.3/3.2mm、4.5mmはオプション。34年は仕様の確認が必要</span></p></div>
       <div class="wood"><div class="wood-badge">融資</div><h3>長期融資・出口</h3><div class="data">最長35年融資対応</div><p>長期融資が組めるため、買い手も融資を付けやすく、売却時の出口が広がる。</p></div>
-      <div class="wood"><div class="wood-badge">耐火</div><h3>耐火性</h3><div class="data">耐火建築物</div><p>4階建てに対応する耐火構造。Kフレームは耐火建築物として認定されており、構造材は不燃。長く資産価値を保つ。</p></div>
+      <div class="wood"><div class="wood-badge">耐火</div><h3>耐火性</h3><div class="data">耐火建築物</div><p>壁・梁とも1時間耐火の認定を取得（Kフレーム）。耐火建築物として、防火地域にも対応。長く資産価値を保つ。</p></div>
       <div class="wood"><div class="wood-badge">土地</div><h3>土地の活用</h3><div class="data">4階建てで<br>戸数を確保</div><p>土地の収益力を使い切り、収益で評価される不動産としての資産性を高める。</p></div>
     </div>
   </div>
