@@ -101,7 +101,7 @@ header{
   font-size:.7rem;font-weight:700;letter-spacing:.2em;
   color:rgba(255,255,255,.7);margin-bottom:1.5rem;
 }
-.hero-eyebrow::before{content:'';display:block;width:24px;height:1px;background:rgba(255,255,255,.5)}
+.hero-eyebrow::before{display:none}
 .hero-h{
   font-size:clamp(1.5rem,4vw,2.8rem);font-weight:900;
   color:#fff;line-height:1.4;margin-bottom:1.5rem;
@@ -129,8 +129,8 @@ header{
 .hero-cta .btn-primary{
   display:flex;flex-direction:column;align-items:center;
   background:var(--g2);color:#fff;font-weight:800;
-  font-size:clamp(.95rem,2vw,1.1rem);padding:1.1rem 2.5rem;
-  border-radius:3px;max-width:420px;
+  font-size:clamp(.82rem,3.8vw,1.1rem);padding:1.1rem clamp(1.2rem,5vw,2.5rem);
+  border-radius:3px;max-width:440px;width:100%;text-align:center;white-space:nowrap;
   box-shadow:0 4px 20px rgba(46,139,46,.45);
   transition:all .2s;line-height:1.4;
   animation:pg 2.5s infinite;
@@ -150,6 +150,7 @@ header{
   font-size:.68rem;color:rgba(255,255,255,.6);line-height:1.7;
   backdrop-filter:blur(6px);
 }
+.hero-elig{flex-direction:column;align-items:flex-start;gap:.15rem}
 .hero-elig strong{color:rgba(255,255,255,.9);font-weight:700}
 .elig-gate{
   border:1px solid rgba(255,255,255,.2);
@@ -492,12 +493,13 @@ section{padding:90px 0}
 .cta-fine{font-size:.7rem;color:rgba(255,255,255,.35);margin-top:1rem;line-height:1.9}
 
 /* ===== AUTHORITY BAR ===== */
-.auth-bar{background:var(--g3);padding:.75rem 0}
-.auth-list{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:center;justify-content:center}
+.auth-bar{background:var(--g3);padding:.5rem 0}
+.auth-list{display:flex;flex-wrap:wrap;gap:.2rem 1rem;align-items:center;justify-content:center}
 .auth-item{
   display:flex;align-items:center;gap:.5rem;
-  color:#fff;font-size:.78rem;font-weight:700;
+  color:#fff;font-size:.74rem;font-weight:700;white-space:nowrap;
 }
+.auth-item{gap:.35rem}
 .auth-dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:rgba(255,255,255,.6)}
 
 /* ===== GALLERY ===== */
@@ -566,8 +568,10 @@ footer a{color:rgba(255,255,255,.35)}
 @media(max-width:768px){.hero-bg::after{background:linear-gradient(to bottom,rgba(8,28,10,.4) 0%,rgba(8,28,10,.5) 40%,rgba(8,28,10,.78) 70%,rgba(8,28,10,.92) 100%)!important}}
 .hero-bg::after{background:linear-gradient(to bottom,rgba(8,28,10,.12) 0%,rgba(8,28,10,.04) 32%,rgba(8,28,10,.55) 68%,rgba(8,28,10,.9) 100%),linear-gradient(to right,rgba(8,28,10,.66) 0%,rgba(8,28,10,.28) 45%,transparent 72%)}
 .hero-h .hero-h2{display:block;font-size:.56em;font-weight:700;line-height:1.6;margin-top:.9rem;color:rgba(255,255,255,.92)}
+.hkpi-l{white-space:nowrap}
+@media(max-width:768px){.hkpi{min-width:0;padding:.8rem .3rem}.hkpi-l{font-size:.56rem}}
 .note-mark{font-size:.4em;vertical-align:super;font-weight:700;color:rgba(255,255,255,.7)}
-.hero-note{font-size:.66rem;color:rgba(255,255,255,.5);margin-top:.9rem;max-width:560px;line-height:1.8}
+.hero-note{font-size:.66rem;color:rgba(255,255,255,.5);margin-top:.5rem;max-width:560px;line-height:1.55}
 .s-market{background:#fff}
 .cmp{max-width:720px;margin:2.5rem auto 0;background:var(--gpale);border:1px solid var(--gline);border-radius:4px;padding:2rem 2.25rem;box-shadow:var(--sh)}
 .cmp-grp + .cmp-grp{margin-top:1.75rem;padding-top:1.5rem;border-top:1px solid var(--gline)}
@@ -581,9 +585,10 @@ footer a{color:rgba(255,255,255,.35)}
 .bar-row.oe span{font-weight:800;color:var(--g1)}
 .cmp-diff{display:inline-block;margin-top:.8rem;font-size:.8rem;font-weight:800;color:var(--g1);background:var(--g4);padding:.2rem .7rem;border-radius:2px}
 @media(max-width:600px){.bar-row{grid-template-columns:1fr 56px;grid-template-areas:"l l" "b v"}.bar-row span{grid-area:l}.bar-row .bar{grid-area:b}.bar-row b{grid-area:v}.cmp{padding:1.5rem 1.25rem}}
-.mk-note{font-size:.7rem;color:var(--muted);line-height:1.9;margin-top:1.25rem;text-align:left}
-.mk-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;max-width:720px;margin:1.5rem auto 0}
-@media(max-width:600px){.mk-stats{grid-template-columns:1fr}}
+.mk-note.sm{font-size:.62rem;line-height:1.55;margin-top:.5rem}
+.mk-note{font-size:.7rem;color:var(--muted);line-height:1.6;margin-top:.5rem;margin-bottom:0;text-align:left}
+.mk-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;max-width:720px;margin:1.5rem auto 0}
+@media(max-width:600px){.mk-stats{gap:.6rem}.mk-stat{padding:.9rem .5rem}.mk-stat .n{font-size:1.3rem}}
 .mk-stat{background:#fff;border:1px solid var(--border);border-top:3px solid var(--g3);border-radius:4px;padding:1.1rem 1rem;text-align:center;box-shadow:var(--sh)}
 .mk-stat .n{font-size:1.5rem;font-weight:900;color:var(--ink);line-height:1.2}
 .mk-stat .l{font-size:.7rem;color:var(--sub);margin-top:.3rem;line-height:1.6}
@@ -600,6 +605,15 @@ footer a{color:rgba(255,255,255,.35)}
 .tbl thead th.hl{background:var(--g2)}
 .tbl tbody th{background:var(--gpale);color:var(--ink);font-weight:800;width:20%}
 .tbl td.hl{background:#f0faf0;font-weight:600}
+@media(max-width:680px){
+.tbl.vs,.tbl.vs tbody{display:block;width:100%;background:none;box-shadow:none}
+.tbl.vs thead{display:none}
+.tbl.vs tr{display:block;margin-top:.9rem;background:#fff;border:1px solid var(--border);border-radius:4px;overflow:hidden;box-shadow:var(--sh)}
+.tbl.vs tbody th{display:block;width:100%;border:0;background:var(--g1);color:#fff;font-size:.8rem;padding:.55rem .9rem}
+.tbl.vs td{display:block;border:0;border-top:1px solid var(--border);font-size:.82rem;padding:.7rem .9rem .75rem}
+.tbl.vs td::before{content:attr(data-l);display:block;font-size:.66rem;font-weight:800;letter-spacing:.1em;color:var(--sub);margin-bottom:.15rem}
+.tbl.vs td.hl::before{color:var(--g2)}
+}
 @media(max-width:680px){.tbl{font-size:.74rem}.tbl th,.tbl td{padding:.6rem .55rem}}
 .s-why2{background:#fff}
 .reason{max-width:760px;margin:2.5rem auto 0;display:grid;gap:1rem}
@@ -617,9 +631,9 @@ footer a{color:rgba(255,255,255,.35)}
 .diff-h span{color:var(--g2)}
 .risk-c .num{font-size:.7rem;font-weight:800;letter-spacing:.14em;color:var(--g2);margin-bottom:.35rem}
 .risk-tag.mid{background:#b9a55a}
-.risk-c .verdict{font-size:1.15rem;font-weight:900;color:var(--g1);margin:.1rem 0 .5rem;line-height:1.4}
-.risk-c .verdict.mid{color:#8a7430}
-.s-risk{background:var(--gpale)}
+.risk-c .diff-t{font-size:1.45rem;font-weight:900;color:var(--ink);margin:.1rem 0 .35rem;line-height:1.3}
+.risk-c .verdict{display:inline-block;font-size:.8rem;font-weight:800;color:var(--g1);background:var(--g4);padding:.15rem .65rem;border-radius:2px;margin:0 0 .7rem;line-height:1.5}
+.risk-c .verdict.mid{color:#8a7430;background:#f4efd8}
 .risk-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
 @media(max-width:760px){.risk-grid{grid-template-columns:1fr}}
 .risk-c{background:#fff;border:1px solid var(--border);border-radius:4px;padding:1.4rem 1.25rem;box-shadow:var(--sh)}
@@ -633,6 +647,23 @@ footer a{color:rgba(255,255,255,.35)}
 .money-h{font-size:.74rem;font-weight:800;letter-spacing:.14em;color:var(--g2);margin-bottom:.6rem}
 .sim-top{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
 @media(max-width:600px){.sim-top{grid-template-columns:1fr}}
+.sim-i.hot .v{color:var(--g1)}
+.sim-rent{text-align:center;margin-top:1.25rem;font-size:.9rem;color:var(--body)}
+.sim-rent b{font-size:1.3rem;font-weight:900;color:var(--ink)}
+.pay-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:.6rem;margin-top:.8rem}
+.pay-s{background:#fff;border:1px solid var(--border);border-top:3px solid var(--g2);border-radius:4px;padding:.8rem .7rem;text-align:center;box-shadow:var(--sh)}
+.pay-s .t{font-size:.72rem;font-weight:800;color:var(--g1)}
+.pay-s .p{font-size:.85rem;font-weight:800;color:var(--ink);margin-top:.25rem}
+@media(max-width:600px){.pay-steps{grid-template-columns:repeat(2,1fr)}}
+.lev{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:stretch;margin-top:2.5rem}
+.lev-c{background:#fff;border:1px solid var(--border);border-radius:4px;padding:1.4rem 1.25rem;box-shadow:var(--sh)}
+.lev-c.to{border-top:3px solid var(--g2);background:#f0faf0}
+.lev-c .h{font-size:.7rem;font-weight:800;letter-spacing:.12em;color:var(--g2);margin-bottom:.6rem}
+.lev-c .big{font-size:1.1rem;font-weight:900;color:var(--ink);line-height:1.7}
+.lev-c .big+.big{margin-top:.2rem}
+.lev-c.to .big{color:var(--g1)}
+.lev-arrow{align-self:center;font-size:1.6rem;color:var(--g2);font-weight:900}
+@media(max-width:680px){.lev{grid-template-columns:1fr}.lev-arrow{transform:rotate(90deg);justify-self:center}}
 .sim-i .k{font-size:.72rem;color:var(--sub)}
 .sim-i .v{font-size:clamp(1.5rem,3.4vw,2.2rem);font-weight:900;color:var(--ink);line-height:1.2}
 .sim-i .v small{font-size:.5em;font-weight:700}
@@ -663,7 +694,7 @@ footer a{color:rgba(255,255,255,.35)}
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<div class="scarcity">【審査制】<strong><span style="white-space:nowrap">年収1,500万円以上</span> または <span style="white-space:nowrap">金融資産5,000万円以上の方限定</span></strong>｜属性確認後、未公開案件を配信</div>
+<div class="scarcity">【審査制】<strong><span style="white-space:nowrap">年収1,500万円以上</span> または <span style="white-space:nowrap">金融資産4,000万円以上の方限定</span></strong>｜属性確認後、未公開案件を配信</div>
 
 <header>
 <div class="wrap-wide hdr">
@@ -676,25 +707,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="hero">
   <div class="hero-bg"><picture><source media="(max-width:768px)" srcset="images/hero_white_ap_sp.jpg"/><img src="images/hero_white_ap.jpg" alt="Original Estate 施工物件"/></picture></div>
   <div class="wrap-wide hero-body">
-    <div class="hero-eyebrow">Apartment for Investment — Original Estate</div>
+    <div class="hero-eyebrow">審査制｜月3件限定の未公開案件</div>
     <h1 class="hero-h">
-      <em>ハイクラス人材・資産家限定</em>
       23区×新築×表面利回り6.8%<span class="note-mark">※</span>
       <span class="hero-h2">建売では得られない収益性が、<br>“土地先行決済”なら得られる</span>
     </h1>
     <p class="hero-lead">
-      同じ新築一棟でも、買い方で利回りは変わります。<strong>完成前に土地を押さえる「先行決済」</strong>の仕組み・リスク・実績を、数字ですべてお見せします。
+      <strong>土地を先に取得し、建物を建築する「土地先行決済」</strong>の仕組み・リスク・実績を、数字でお見せします。
     </p>
     <div class="hero-kpi">
-      <div class="hkpi"><div class="hkpi-n">6.82<sup>%</sup></div><div class="hkpi-l">OE 木造の<br>実績平均</div></div>
-      <div class="hkpi"><div class="hkpi-n">5.45<sup>%</sup></div><div class="hkpi-l">23区 建売（木造）<br>の平均</div></div>
+      <div class="hkpi"><div class="hkpi-n">6.82<sup>%</sup></div><div class="hkpi-l">当社 木造の実績平均</div></div>
+      <div class="hkpi"><div class="hkpi-n">5.45<sup>%</sup></div><div class="hkpi-l">建売（木造）の平均</div></div>
       <div class="hkpi"><div class="hkpi-n">+1.4<sup>pt</sup></div><div class="hkpi-l">相場との差</div></div>
-      <div class="hkpi"><div class="hkpi-n">月3<sup>件</sup></div><div class="hkpi-l">審査制・<br>未公開案件</div></div>
     </div>
     <div class="hero-cta">
       <a href="https://lin.ee/Qi9CLLB" class="btn-primary" target="_blank" rel="noopener" onclick="dataLayer.push({event:'line_cv',lp:'senkou',cta_location:'hero'});fbq('trackCustom','LineCV',{lp:'senkou'})">審査制ウェイティングリストに登録する<small>▶ 公式LINE 属性確認後に情報開示</small></a>
       <p class="hero-cta-note">登録は無料。審査基準を満たした方にのみ物件情報を公開します。</p>
-      <div class="hero-elig"><strong>対象：年収1,500万円以上 または 金融資産5,000万円以上</strong>　※高額な投資物件につき、条件外の方はご参加いただけません。</div>
+      <div class="hero-elig"><strong>対象：年収1,500万円以上 または 金融資産4,000万円以上</strong><span>※高額な投資物件につき、条件外の方はご参加いただけません。</span></div>
       <p class="hero-note">※木造の実績平均（2024年以降に販売した32物件・範囲6.5〜7.0%）。表面利回り・満室想定で、将来の収益を保証するものではありません。鉄骨の実績平均は6.55%（11物件）。</p>
     </div>
   </div>
@@ -702,9 +731,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </section>
 
 <div class="auth-bar"><div class="wrap-wide"><div class="auth-list">
-  <div class="auth-item"><span class="auth-dot"></span>木造 実績平均 6.82%</div>
-  <div class="auth-item"><span class="auth-dot"></span>鉄骨 実績平均 6.55%</div>
-  <div class="auth-item"><span class="auth-dot"></span>劣化対策等級3（最高ランク）</div>
   <div class="auth-item"><span class="auth-dot"></span>最長35年融資対応</div>
   <div class="auth-item"><span class="auth-dot"></span>東京23区</div>
 </div></div></div>
@@ -716,27 +742,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="sec-label">01 — The Market</div>
     <h2 class="sec-h">23区の新築一棟、<span>建売の相場</span>はこの水準です。</h2>
     <div class="divider"></div>
-    <p class="sec-body">ポータルサイトに並ぶ新築一棟は、売主が建設し、完成後に引き渡される「建売」です。2026年11月の楽待で、23区・築1年以内の新築一棟（アパート・マンション）を集計しました。</p>
-  </div>
-  <div class="mk-stats reveal">
-    <div class="mk-stat"><div class="n">5.45%</div><div class="l">木造85物件の平均<br>（最高でも6.70%）</div></div>
-    <div class="mk-stat"><div class="n">4.72%</div><div class="l">鉄骨系22物件の平均</div></div>
-    <div class="mk-stat"><div class="n">4.15%</div><div class="l">RC73物件の平均</div></div>
+    <p class="sec-body">ポータルサイトに並ぶ新築一棟は、売主が建設し、完成後に引き渡される「建売」です。2026年11月の楽待（23区・築1年以内）で集計しました。</p>
   </div>
   <div class="cmp reveal">
     <div class="cmp-grp">
       <div class="cmp-title">木造</div>
-      <div class="bar-row"><span>建売の相場（平均）</span><div class="bar"><i style="width:68.1%"></i></div><b>5.45%</b></div>
-      <div class="bar-row oe"><span>OE 先行決済の実績（平均）</span><div class="bar"><i style="width:85.3%"></i></div><b>6.82%</b></div>
-      <div class="cmp-diff">相場との差 ＋1.4pt（1億1,900万円の物件で年約165万円）</div>
+      <div class="bar-row"><span>建売の相場（平均／最高6.70%）</span><div class="bar"><i style="width:68.1%"></i></div><b>5.45%</b></div>
+      <div class="bar-row oe"><span>当社 先行決済の実績（平均）</span><div class="bar"><i style="width:85.3%"></i></div><b>6.82%</b></div>
+      <div class="cmp-diff">相場との差 ＋1.4pt ＝ 価格1億円の物件で、年間の想定家賃収入が約140万円多い計算</div>
     </div>
     <div class="cmp-grp">
       <div class="cmp-title">鉄骨</div>
-      <div class="bar-row"><span>建売の相場（平均）</span><div class="bar"><i style="width:59%"></i></div><b>4.72%</b></div>
-      <div class="bar-row oe"><span>OE 先行決済の実績（平均）</span><div class="bar"><i style="width:81.9%"></i></div><b>6.55%</b></div>
-      <div class="cmp-diff">相場との差 ＋1.8pt</div>
+      <div class="bar-row"><span>建売の相場（平均／最高6.50%）</span><div class="bar"><i style="width:59%"></i></div><b>4.72%</b></div>
+      <div class="bar-row oe"><span>当社 先行決済の実績（平均）</span><div class="bar"><i style="width:81.9%"></i></div><b>6.55%</b></div>
+      <div class="cmp-diff">相場との差 ＋1.8pt ＝ 価格2億円の物件で、年間の想定家賃収入が約370万円多い計算</div>
     </div>
-    <p class="mk-note">※建売の相場：楽待（2026年11月12日時点）の東京23区・1棟マンション/アパート・築1年以内。PR枠を除き、同一物件の重複掲載を1件に統合して自社集計。利回りは各社の表示値（表面利回り）。鉄骨系は鉄骨造・軽量鉄骨造・重量鉄骨造。<br>※OEの実績：2024年以降の販売実績（木造32物件・鉄骨11物件）の販売時の表面利回りの平均。範囲は木造6.5〜7.0%、鉄骨6.5〜6.8%。将来の収益を保証するものではありません。</p>
+    <p class="mk-note sm">※建売の相場：楽待（2026/11/12時点）の23区・1棟アパート/マンション・築1年以内。PR除外・重複掲載は統合し、自社集計。数値は各社表示の表面利回り。鉄骨系＝鉄骨・軽量鉄骨・重量鉄骨。<br>※当社の実績：2024年以降の販売実績（木造32・鉄骨11物件）の販売時の表面利回りの平均。範囲は木造6.5〜7.0%、鉄骨6.5〜6.8%。<br>※家賃差は「木造1億円・鉄骨2億円×利回り差」の単純計算（満室想定・経費控除前）。将来の収益を保証するものではありません。</p>
   </div>
 </div>
 </section>
@@ -748,31 +769,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="sec-label">02 — The Method</div>
     <h2 class="sec-h">利回りの差は、<span>買い方</span>で生まれます。</h2>
     <div class="divider"></div>
-    <p class="sec-body">先行決済は、土地を先に取得し、建物は工事の進捗に応じて支払う買い方です。土地売買契約と建築工事請負契約を別々に結び、着工前に土地の所有権を移します。</p>
+    <p class="sec-body">建売は土地・建物の一括契約で、決済は引渡し時。先行決済は、土地売買契約と建築工事請負契約を別々に結び、土地を着工前に決済します。建売と違い、完成前から資金計画が必要です。</p>
   </div>
   <div class="flow reveal">
-    <div class="flow-c"><div class="flow-n">STEP 01</div><h3>土地を取得</h3><p>土地売買契約と請負契約を締結。融資の承認を得たうえで土地を決済し、所有権が移ります。</p></div>
-    <div class="flow-c"><div class="flow-n">STEP 02</div><h3>建物を建築</h3><p>建築確認の交付後に着工。着工時・中間時に融資を実行し、工事代金を分割で支払います。</p></div>
-    <div class="flow-c"><div class="flow-n">STEP 03</div><h3>完成・引渡し</h3><p>完成・検査後に残代金を精算し、建物を引き渡し。そのまま賃貸経営を開始します。</p></div>
+    <div class="flow-c"><div class="flow-n">STEP 01</div><h3>土地を取得</h3><p>融資の承認後、着工前に土地を決済。</p></div>
+    <div class="flow-c"><div class="flow-n">STEP 02</div><h3>建物を建築</h3><p>工事代金は着工時・中間時に分割して支払い。</p></div>
+    <div class="flow-c"><div class="flow-n">STEP 03</div><h3>完成・引渡し</h3><p>残代金を精算し、賃貸経営を開始。</p></div>
   </div>
-  <table class="tbl reveal">
-    <thead><tr><th></th><th>建売（土地・建物を一括で購入）</th><th class="hl">土地先行決済（土地を先に決済）</th></tr></thead>
-    <tbody>
-      <tr><th>取得のタイミング</th><td>土地・建物を一括で売買契約。引渡しは建物の完成後</td><td class="hl">土地売買契約と建築工事請負契約を別々に締結。着工前に土地を決済し、建物は工事の進捗に応じて支払い</td></tr>
-      <tr><th>売主の負担</th><td>建設中の土地の金利と、建設費の立替えを売主が負担</td><td class="hl">土地・建築の資金負担は買主様の融資に置き換わる</td></tr>
-      <tr><th>価格・利回り</th><td>売主の負担が価格に乗るため、利回りは低め</td><td class="hl">上乗せが小さく、利回りは高め</td></tr>
-      <tr><th>代金の支払い</th><td>土地・建物の代金を引渡し時に決済。総額は契約時点で確定</td><td class="hl">土地代金を着工前に決済。建物代金は着工時・中間時・完成時の3回に分けて支払い</td></tr>
-      <tr><th>引渡し・内容</th><td>引渡しは建物の完成後。契約時点で金額・内容が確定</td><td class="hl">引渡しは建物の完成後。工事の進捗により時期や内容の調整が生じる場合があり、その際は速やかに共有</td></tr>
-    </tbody>
-  </table>
   <h3 class="diff-h reveal">建売との違いは、<span>この3つ</span></h3>
   <div class="risk-grid reveal">
-    <div class="risk-c"><div class="num">01</div><span class="risk-tag">利回り</span><div class="verdict">先行決済は高い</div><p>23区の建売（木造）の平均5.45%に対し、OEの先行決済は木造の実績平均6.82%、鉄骨6.55%です。</p></div>
-    <div class="risk-c"><div class="num">02</div><span class="risk-tag">建築費</span><div class="verdict">上振れリスクは小さい</div><p>建設費が上昇した場合は、5%を上限にOEが負担します（全物件対象）。建築費の上振れリスクを小さく抑えています。</p></div>
-    <div class="risk-c"><div class="num">03</div><span class="risk-tag mid">引渡し時期</span><div class="verdict mid">変動の可能性がある</div><p>工事の進捗により、引渡し時期が変わる場合があります。変更時は速やかにご連絡します。建売と比べて注意いただくのは、主にこの点です。</p></div>
+    <div class="risk-c"><div class="num">01</div><h3 class="diff-t">利回り</h3><div class="verdict">先行決済は高い</div><p>23区の建売（木造）の平均5.45%に対し、当社の先行決済は木造の実績平均6.82%、鉄骨6.55%です。</p></div>
+    <div class="risk-c"><div class="num">02</div><h3 class="diff-t">価格変動リスク</h3><div class="verdict">上振れは5%まで当社が負担</div><p>建設費が上昇した場合は、建築工事費の5%を上限に当社が負担します（全物件対象）。</p></div>
+    <div class="risk-c"><div class="num">03</div><h3 class="diff-t">引渡し時期</h3><div class="verdict mid">変動の可能性がある</div><p>工事の進捗により、引渡し時期が変わる場合があります。実績では、土地決済から完了検査まで約6〜17か月（中央値は約10.5か月）です。建売と比べて注意いただくのは、主にこの点です。</p></div>
   </div>
-  <p class="mk-note reveal">※このほか、土地決済後の工事期間中は、買主様に融資の金利・諸費用がかかります（次章で詳しくご説明します）。5%負担の詳細は案件ごとにご説明します。</p>
-  <p class="mk-note reveal">※基本的な流れの一例です。承認・契約・土地決済・建築確認の順序は案件ごとに調整します。着工は確認済証の交付後です。</p>
+  <p class="mk-note reveal">※土地決済後の工事期間中は、買主様に融資の金利・諸費用がかかります。5%負担の詳細は案件ごとにご説明します。流れは一例で、承認・契約・土地決済・建築確認の順序は案件ごとに調整します。</p>
 </div>
 </section>
 
@@ -783,102 +793,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="sec-label">03 — Why It Works</div>
     <h2 class="sec-h">なぜ、先行決済だと<span>利回りが高くなる</span>のか。</h2>
     <div class="divider"></div>
-    <p class="sec-body">先行決済は目的ではなく、手段です。建売が価格に乗せざるを得ないコストを、仕組みの側で減らせるからです。</p>
+    <p class="sec-body">建売が価格に乗せざるを得ないコストを、仕組みの側で減らせるからです。</p>
   </div>
   <div class="reason reveal">
-    <div class="reason-c"><div class="reason-n">1</div><div><h3>建設期間中の「土地の金利」がかからない</h3><p>建売の売主は、建物が完成して引き渡すまで土地を保有し続け、その間の利息を払います。先行決済では、土地を先に買主様が取得するため、この金利負担が発生しません。</p></div></div>
-    <div class="reason-c"><div class="reason-n">2</div><div><h3>建設費を「自社の財布から立て替える」必要がない</h3><p>建売は、工事代金を一旦売主が自社資金で支払います。先行決済では、工事代金は工事の進捗に応じて買主様の融資から支払われます。</p></div></div>
-    <div class="reason-c sum"><div class="reason-n">3</div><div><h3>空いた資金を次の仕入れに回せるため、利益を厚く乗せる必要がない</h3><p>建設費に回さなければならないキャッシュが浮き、次の土地の仕入れに回せます。建売ほど利益を乗せなくても事業が回るため、その分、販売価格を抑え、利回りに還元できます。</p></div></div>
-  </div>
-  <div class="disclose reveal">
-    <h3>その代わりに、買主様に生じること</h3>
-    <p>土地決済から完成までの工事期間中は、買主様に融資の金利や諸費用がかかります（表面利回りには含まれません）。完成・引渡しまでの期間は、これまでの実績で土地決済から完了検査まで約6〜17か月（中央値は約10.5か月）です。時期は目安で、工事の進捗により変わる場合があります。変更が生じた場合は速やかにご連絡します。</p>
+    <div class="reason-c"><div class="reason-n">1</div><div><h3>建設期間中の「土地の金利」がかからない</h3><p>建売の売主は、完成まで土地を保有してその利息を払います。先行決済では買主様が先に土地を取得するため、売主には発生しません。</p></div></div>
+    <div class="reason-c"><div class="reason-n">2</div><div><h3>建設費を立て替える必要がない</h3><p>建売は工事代金を売主が自社資金で支払います。先行決済では、買主様の融資から工事の進捗に応じて支払われます。</p></div></div>
+    <div class="reason-c sum"><div class="reason-n">3</div><div><h3>空いた資金を次の仕入れに回せる</h3><p>建売ほど利益を厚く乗せなくても事業が回るため、その分を販売価格に還元し、利回りが高くなります。</p></div></div>
   </div>
 </div>
 </section>
 
 <!-- 04 RISK -->
-<section class="s-risk">
-<div class="wrap">
-  <div class="reveal">
-    <div class="sec-label">04 — Transparency</div>
-    <h2 class="sec-h">先行決済の<span>リスク</span>と、契約前に確認すること。</h2>
-    <div class="divider"></div>
-    <p class="sec-body">完成前から資金計画が必要になる点が、建売との大きな違いです。次の3点は、契約前に必ず確認します。</p>
-  </div>
-  <div class="risk-grid reveal">
-    <div class="risk-c"><span class="risk-tag">融資</span><h3>承認を得てから契約へ</h3><p>融資の事前承認または本承認を得てから契約します。融資利用の特約（ローン特約）を付けて進めることが多く、融資が承認されなかった場合は白紙解約が可能です。特約・請負契約の成立条件と解除条件は、契約前に案件ごとに確認します。</p></div>
-    <div class="risk-c"><span class="risk-tag">支払い</span><h3>支払いは4つの段階に分割</h3><p>土地決済時、建物着工時、建築工事の中間時、建物完成時の4回に分けて支払います。融資実行額・時期は、金融機関の承認条件と請負契約の支払条件に従います。建設費が上昇した場合は、5%を上限にOEが負担します（全物件対象）。</p></div>
-    <div class="risk-c"><span class="risk-tag">時期</span><h3>時期は目安。変わる時は速やかに共有</h3><p>完成・引渡しの時期は、工事の進捗や天候、行政手続きにより変わる場合があります。変更が生じた場合は速やかにご連絡し、資金計画への影響も含めてご相談します。</p></div>
-  </div>
-</div>
-</section>
 
-<!-- 05 MONEY -->
-<section class="s-money">
-<div class="wrap">
-  <div class="reveal">
-    <div class="sec-label">05 — Funding Model</div>
-    <h2 class="sec-h">資金計画の<span>モデル試算</span>（実績ベース）。</h2>
-    <div class="divider"></div>
-    <p class="sec-body">木造の実績平均（約6.8%）に合わせた試算です。特定の販売物件ではありません。</p>
-  </div>
-  <div class="sim-top reveal">
-    <div class="sim-i"><div class="k">商品価格</div><div class="v">1億3,900<small>万円</small></div></div>
-    <div class="sim-i"><div class="k">年間想定賃料</div><div class="v">945.2<small>万円</small></div></div>
-    <div class="sim-i"><div class="k">表面利回り</div><div class="v">6.8<small>%</small></div></div>
-  </div>
-  <div class="money-cols reveal">
-    <div>
-      <div class="money-h">資金計画（融資割合90%を想定）</div>
-      <table class="tbl">
-        <thead><tr><th>項目</th><th>金額・割合</th></tr></thead>
-        <tbody>
-          <tr><th>物件価格</th><td>13,900万円</td></tr>
-          <tr><th>想定融資割合</th><td>90%</td></tr>
-          <tr><th>想定融資額</th><td>12,510万円</td></tr>
-          <tr><th>物件代金に対する自己資金</th><td>1,390万円</td></tr>
-        </tbody>
-      </table>
-      <p style="font-size:.9rem;font-weight:800;color:var(--g1);margin-top:.9rem">必要自己資金 ＝ 1,390万円 ＋ 諸費用</p>
-    </div>
-    <div>
-      <div class="money-h">融資実行・工事代金の支払時期</div>
-      <table class="tbl">
-        <thead><tr><th>時期</th><th>支払対象・割合</th></tr></thead>
-        <tbody>
-          <tr><th>土地決済時</th><td>土地取得代金</td></tr>
-          <tr><th>建物着工時</th><td>請負金額の約30%</td></tr>
-          <tr><th>建築工事の中間時</th><td>請負金額の約30%</td></tr>
-          <tr><th>建物完成時</th><td>請負金額の約40%</td></tr>
-        </tbody>
-      </table>
-      <p style="font-size:.9rem;font-weight:800;color:var(--g1);margin-top:.9rem">建物の支払割合合計 100%</p>
-    </div>
-  </div>
-  <p class="mk-note reveal">※表面利回り＝年間想定賃料÷物件価格。満室想定・経費控除前であり、賃料収入や利回りを保証するものではありません。試算は融資承認事例ではありません。登記・税金・仲介・融資手数料、工事期間中の金利等は別途で、金利・期間・返済額は未設定です。融資実行額・時期は金融機関の承認条件と請負契約の支払条件に従い、支払額の全額を融資で賄えるとは限りません。</p>
-</div>
-</section>
 
-<!-- 06 LOAN -->
+<!-- 05 LOAN -->
 <section class="s-fit">
 <div class="wrap">
   <div class="reveal">
-    <div class="sec-label">06 — Financing</div>
-    <h2 class="sec-h">融資の目安と、<span>向いている方・向かない方</span>。</h2>
+    <div class="sec-label">04 — Financing</div>
+    <h2 class="sec-h">しかし、<span>買える人は限られます</span>。</h2>
     <div class="divider"></div>
+    <p class="sec-body">引渡し時期の変動と引き換えに、利回りが高い土地先行決済。その分、高い属性が求められます。属性を満たす方には、融資条件は有利です。</p>
   </div>
-  <table class="tbl reveal">
-    <thead><tr><th>審査項目</th><th>相談の目安（1棟目の収益不動産購入者様を中心とした目安）</th></tr></thead>
-    <tbody>
-      <tr><th>年収</th><td>給与収入1,500万円以上</td></tr>
-      <tr><th>金融資産</th><td>5,000万円以上</td></tr>
-      <tr><th>融資割合</th><td>新築で物件価格の90%以上の事例が多い</td></tr>
-      <tr><th>既存借入</th><td>収益不動産の借入がある場合、属性条件が厳しくなる傾向</td></tr>
-      <tr><th>共同担保</th><td>原則必須ではない</td></tr>
-    </tbody>
-  </table>
-  <p class="mk-note reveal">※弊社商品のご購入者様に利用実績のある金融機関への相談を、取引支店とあわせて支援します。金融機関・支店ごとに審査方針や取扱いが異なります。条件は変更される場合があり、記載条件を満たしても融資承認を保証するものではありません。</p>
+  <div class="lev reveal">
+    <div class="lev-c"><div class="h">求められる属性</div><div class="big">給与収入1,500万円以上</div><div class="big">または 金融資産4,000万円以上</div></div>
+    <div class="lev-arrow">▶</div>
+    <div class="lev-c to"><div class="h">その代わり、融資条件は有利</div><div class="big">融資割合 90%以上</div><div class="big">融資期間 35年</div><div class="big">自己資金は物件価格の約1割＋諸費用</div></div>
+  </div>
+  <p class="mk-note reveal">※1棟目の収益不動産購入者様を中心とした目安です。収益不動産の既存借入がある場合は、条件が厳しくなる傾向があります。共同担保は原則必須ではありません。弊社商品のご購入者様に利用実績のある金融機関への相談を、取引支店とあわせて支援します。ご自身の取引銀行を利用する場合は、土地資金の先行実行と建築資金の分割実行が可能か、事前の確認が必要です。金融機関・支店ごとに審査方針や取扱いが異なり、条件は変更される場合があります。記載条件を満たしても融資承認を保証するものではありません。</p>
   <div class="fit reveal">
     <div class="fit-c ok"><h3>先行決済が向いている方</h3><ul>
       <li>建売より高い利回りを重視する</li>
@@ -898,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="s-proof">
 <div class="wrap">
   <div class="reveal">
-    <div class="sec-label">07 — Evidence</div>
+    <div class="sec-label">05 — Evidence</div>
     <h2 class="sec-h">選ばれた投資家が手にした、<span>実際のパッケージ例。</span></h2>
     <div class="divider"></div>
   </div>
@@ -943,17 +885,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section class="s-faq">
 <div class="wrap">
   <div class="reveal">
-    <div class="sec-label">08 — FAQ</div>
+    <div class="sec-label">06 — FAQ</div>
     <h2 class="sec-h">よくある<span>ご質問</span>。</h2>
     <div class="divider"></div>
   </div>
   <div class="faq reveal">
     <details><summary>引渡し時期は確定していますか？</summary><div class="a"><p>完成・引渡しの時期は目安です。工事の進捗や天候、行政手続きにより変わる場合があります。変更が生じた場合は速やかにご連絡し、資金計画への影響も含めてご相談します。</p></div></details>
-    <details><summary>融資が通らなかった場合はどうなりますか？</summary><div class="a"><p>融資の事前承認または本承認を得てから契約します。融資利用の特約（ローン特約）を付けて進めることが多く、融資が承認されなかった場合は白紙解約が可能です。特約の内容・解除条件は、契約前に案件ごとにご説明します。</p></div></details>
     <details><summary>工事期間中にかかる費用は？</summary><div class="a"><p>土地決済後、完成までの期間に融資の金利がかかります。登記・税金・仲介・融資手数料等の諸費用も別途必要です。資金計画は、これらを含めて事前にご相談します。</p></div></details>
-    <details><summary>建売と先行決済、どちらがよいですか？</summary><div class="a"><p>目的によって異なります。契約時点で金額・資金計画を確定させたい方、引渡し時期や金額のブレを避けたい方は建売。利回りを重視し、完成前から資金計画を持てる方は先行決済が向いています。</p></div></details>
-    <details><summary>対象条件は？</summary><div class="a"><p>年収1,500万円以上、または金融資産5,000万円以上の方が対象です。属性アンケートの回答をもとに、ご案内できる物件をお知らせします。</p></div></details>
-    <details><summary>木造と鉄骨、どちらも選べますか？</summary><div class="a"><p>どちらもご案内しています。実績の平均表面利回りは、木造6.82%、鉄骨6.55%です。ご希望と属性に合わせてご案内します。</p></div></details>
+    <details><summary>木造と鉄骨、どちらも選べますか？</summary><div class="a"><p>どちらもご案内しています。ご希望と属性に合わせてご案内します。</p></div></details>
   </div>
 </div>
 </section>
@@ -961,7 +900,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- 09 CTA -->
 <section class="s-cta" id="register">
 <div class="cta-inner reveal">
-  <div class="cta-label">09 — Waiting List</div>
+  <div class="cta-label">07 — Waiting List</div>
   <h2 class="cta-h">この公式LINEは、<span>審査制ウェイティングルーム</span>です。</h2>
   <p class="cta-desc">
     月3件の未公開案件を、先に直接お届けするためのクローズドなチャネルです。<br>
@@ -973,7 +912,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="elig-title">ハイクラス人材・資産家限定</div>
     <div class="elig-items">
       <div class="elig-item"><span class="elig-dot"></span>年収 1,500万円以上</div>
-      <div class="elig-item"><span class="elig-dot"></span>金融資産 5,000万円以上保有</div>
+      <div class="elig-item"><span class="elig-dot"></span>金融資産 4,000万円以上保有</div>
     </div>
     <hr class="elig-sep">
     <p class="elig-note">※高額な投資物件につき、上記いずれかの条件を満たす方のみお申込みいただけます。条件を満たさない場合、物件情報はお届けしません。</p>
